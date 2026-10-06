@@ -7,12 +7,7 @@ void main() {
         grades[i] = Double.parseDouble(userInput);
     }
     // Summierung:
-    double sum = 0;
-    for (int i=0; i < grades.length; i++){
-        sum = sum + grades[i];
-        // Verkürzte Schreibweise:
-        //sum += grades[i];
-    }
+    double sum = calcSum(grades);
     IO.println("Summe: " + sum);
 
     // Durchschnittsberechnung:
@@ -33,4 +28,14 @@ void main() {
     for (int i=0; i < grades.length; i++){
         IO.println(grades[i]);
     }
+}
+
+double calcSum(double[] array){
+    double sum = 0;
+    for (int i=0; i < array.length; i++){
+        sum = sum + array[i];
+        // Verkürzte Schreibweise:
+        //sum += grades[i];
+    }
+    return sum;
 }

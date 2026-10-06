@@ -26,6 +26,15 @@ void main() {
     IO.println(sum);
     int sum2 = add(3, 299);
     IO.println(sum2);
+
+    // Aufruf der Funktion calcPercent():
+    double number1 = 300.0;
+    int percentage1 = 50;
+    double result = calcPercent(number1, percentage1);
+    IO.println(result);
+
+    IO.println(calcPercent(222.2, 20));
+
 }
 
 //Definition der Funktion:
@@ -35,4 +44,9 @@ boolean isAdult(int age){
 
 int add(int number1, int number2){
     return number1 + number2;
+}
+
+double calcPercent(double number, int percentage){
+    double result = number * percentage / 100;
+    return result;
 }
