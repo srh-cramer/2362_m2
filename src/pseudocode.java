@@ -1,10 +1,24 @@
 void main() {
-    
+    int[] myNumbers = {4, 6, 10, 2, 8};
+    int biggest = getBiggestNumber(myNumbers);
+    IO.println(biggest);
 }
 
+int getBiggestNumber(int[] array){
+    int biggestNumber = array[0];
+    for (int i = 0; i < array.length; i++){
+        if (array[i] > biggestNumber){
+            biggestNumber = array[i];
+        }
+    }
+    return biggestNumber;
+}
+
+// PAP: Siehe Bilddatei Größte Zahl im Array finden
+// Pseudocode
 /*
 Funktion biggestNumber(A):
-    bN = 0
+    bN = A an Stelle 1
     Für jedes Element x in A:
         Wenn x > bN:
             bN = x

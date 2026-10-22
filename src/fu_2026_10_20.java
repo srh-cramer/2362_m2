@@ -1,7 +1,12 @@
 // Main-Methode
 void main() {
 
-    methode2();
+    int i = 1;
+    while (i < 20){
+        IO.println(i * 2);
+        i = i + 2;
+    }
+    //methode2();
 }
 // Direkt Code außerhalb Main-Methode
 // int i = 3;
@@ -30,4 +35,13 @@ int ganzeZahl(double kommazahl){
     // Dafür benutzen wir Cast-Operator: (int)
     int ganzeZahl = (int) kommazahl;
     return ganzeZahl;
+}
+
+int getPositionOfBook(String[] bookshelf, String targetBook){
+    for (int i = 0; i < bookshelf.length; i++){
+        if (bookshelf[i].equals(targetBook)){
+            return i;
+        }
+    }
+    return 0;
 }
